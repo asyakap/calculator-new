@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Voting</title>
+</head>
+<body>
+  <div>
+    <form>
+      <label for="age">Enter your current age:</label>
+      <input id="age" type="number">
+      <button type="submit">Submit!</button>
+    </form>
+
+    <div id="voting" class="hidden">
+      <h1>Here is some information for voting.</h1>
+      <p>The next election in the USA will take place on Tuesday, February 21, 2023.</p>
+      <ul>
+        <li>You can register to vote <a href = "https://www.usa.gov/register-to-vote">here</a>.</li>
+        <li>You can find your ballot drop box location <a href = "https://www.usa.gov/election-office">here</a>.</li>
+      </ul>
+    </div>
+
+    <div id="under-18" class="hidden">
+      <h1>Sorry, you are legally too young to vote. Come back in a few years.</h1>
+      <p>Please check this webpage <a href="https://www.usa.gov/voting"> about voting</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
