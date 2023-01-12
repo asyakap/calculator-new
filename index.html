@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/scripts.js"></script>
-  <title>Voting</title>
+  <title>Calculator</title>
 </head>
+
 <body>
   <div>
     <form>
-      <label for="age">Enter your current age:</label>
-      <input id="age" type="number">
-      <button type="submit">Submit!</button>
+      <label for="number1">Enter 1st number:</label>
+      <input id="number1" type="number">
+      <label for="number2">Enter 2nd number:</label>
+      <input id="number2" type="number">
     </form>
 
-    <div id="voting" class="hidden">
-      <h1>Here is some information for voting.</h1>
-      <p>The next election in the USA will take place on Tuesday, February 21, 2023.</p>
-      <ul>
-        <li>You can register to vote <a href = "https://www.usa.gov/register-to-vote">here</a>.</li>
-        <li>You can find your ballot drop box location <a href = "https://www.usa.gov/election-office">here</a>.</li>
-      </ul>
-    </div>
+    <form id="radio-form">
+      <label>
+        <input type="radio" name="operation" value="Add" checked>
+        Add
+      </label><br>
+      <label>
+        <input type="radio" name="operation" value="Subtract">
+        Subtract
+      </label><br>
+      <label>
+        <input type="radio" name="operation" value="Multiply">
+        Multiply
+      </label><br>
+      <input type="radio" name="operation" value="Divide">
+      Divide
+      </label><br>
+      <button type="submit">Submit Selection</button>
+    </form>
 
-    <div id="under-18" class="hidden">
-      <h1>Sorry, you are legally too young to vote. Come back in a few years.</h1>
-      <p>Please check this webpage <a href="https://www.usa.gov/voting"> about voting</a>.</p>
-    </div>
+    <h1>Result:</h1>
+    <p id="output"></p>
+
   </div>
+
 </body>
+
 </html>

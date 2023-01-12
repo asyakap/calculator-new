@@ -1,26 +1,50 @@
 
-window.onload = function() {
-  const form = document.querySelector("form");
+window.onload = function () {
+  const form = document.querySelector("form#radio-form");
 
-  function formSubmit() {
+function add(number1, number2) {
+  let number3 = number1 + number2;
+  return number3;
+}
+
+function subtract(number1, number2) {
+  let number3 = number1 - number2;
+  return number3;
+}
+
+function multiply(number1, number2) {
+  let number3 = number1 * number2;
+  return number3;
+}
+
+function divide(number1, number2) {
+  let number3 = number1 / number2;
+  return number3;
+}
+
+
+  form.addEventListener("submit", function() {
     event.preventDefault();
+  
+    const number1 = parseInt(document.getElementById("number1").value);
+    const number2 = parseInt(document.getElementById("number2").value);
+    const radioSelection = document.querySelector("input[name='operation']:checked").value;
 
-    let voting = document.getElementById("voting");
-    voting.setAttribute("class", "hidden");
-    let under18Message = document.getElementById("under-18");
-    under18Message.setAttribute("class", "hidden");
+    console.log(number1, number2, radioSelection);
 
-    const age = parseInt(document.querySelector("input#age").value);
 
-    if (age > 17) {  // updated to check if age is greater than 17
-      voting.removeAttribute("class");
-    } else {
-      under18Message.removeAttribute("class");
+    if (radioSelection === "Add") {  // check for operator
+      result = add(number1, number2);
+    } else if (radioSelection === "Subtract") {
+      result = subtract(number1, number2);
+    } else if (radioSelection === "Multiply") {
+      result = multiply(number1, number2);
+    } else if (radioSelection === "Divide") {
+      result = divide(number1, number2);
     }
-    form.removeEventListener("submit", formSubmit);
-  }
+    console.log(result);
+   document.getElementById("output").innerText = result;
+  });
 
-  form.addEventListener("submit", formSubmit);
- 
 
 };

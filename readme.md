@@ -1,16 +1,16 @@
-# Voting info
+# Calculator
 
-#### By Asia Kaplanyan 
+#### By Asia Kaplanyan and Molly Donegan
 
 ## Technologies Used
 
 * _HTML_
 * _CSS_
-* JavaScript
+* _JavaScript_
 
 ## Description
 
-_This webpage shows nformation about voting depending on user's age._
+_This webpage present a calculator._
 
 ## Setup/Installation Requirements
 
@@ -26,7 +26,7 @@ _This webpage shows nformation about voting depending on user's age._
 
 _If you run into a problem or in case you have any ideas or concerns please contact me._
 
-Copyright (c) _01/11/2023_ _Asia Kaplanyan_
+Copyright (c) _01/12/2023_ _Asia Kaplanyan and Molly Donegan_
 
 
 
