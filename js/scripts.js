@@ -1,6 +1,8 @@
+
 window.onload = function() {
   const form = document.querySelector("form");
-  form.onsubmit = function(event) {
+
+  function formSubmit() {
     event.preventDefault();
 
     let voting = document.getElementById("voting");
@@ -15,5 +17,10 @@ window.onload = function() {
     } else {
       under18Message.removeAttribute("class");
     }
-  };
+    form.removeEventListener("submit", formSubmit);
+  }
+
+  form.addEventListener("submit", formSubmit);
+ 
+
 };
